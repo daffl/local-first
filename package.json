@@ -1,0 +1,24 @@
+{
+  "name": "local-first",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@automerge/automerge": "^2.1.7",
+    "@automerge/automerge-repo": "^1.0.19",
+    "@automerge/automerge-repo-network-broadcastchannel": "^1.0.19",
+    "@automerge/automerge-repo-network-websocket": "^1.0.19",
+    "@automerge/automerge-repo-storage-indexeddb": "^1.0.19",
+    "@oddjs/odd": "^0.37.2",
+    "@slidev/cli": "^0.44.0",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest",
+    "slidev-theme-dracula": "^0.2.0",
+    "vite-plugin-top-level-await": "^1.3.1",
+    "vite-plugin-wasm": "^3.2.2"
+  }
+}
