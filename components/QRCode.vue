@@ -8,7 +8,11 @@ const props = defineProps({
   },
   page: {
     type: String,
-  }
+  },
+  size: {
+    type: Number,
+    default: 500
+  },
 })
 
 // Get the location href until the last /
@@ -18,5 +22,5 @@ const value = ref(props.value || props.page ? `${href}/${props.page}#${hash}` : 
 </script>
 
 <template>
-  <a :href="value"><qrcode-vue class="mx-a h-full" :value="value" :size="500" level="M" render-as="svg" foreground="hsl(248, 38%, 15%)" background="#ffffff" /></a>
+  <a :href="value"><qrcode-vue class="mx-a h-full" :value="value" :size="props.size" level="M" render-as="svg" foreground="hsl(248, 38%, 15%)" background="#ffffff" /></a>
 </template>

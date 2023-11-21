@@ -70,6 +70,12 @@ handle.on('change', ({doc}) => {
 
 <template>
 <div class="container mx-auto py-4 flex flex-col h-full">
+  <form @submit.prevent="addMessage" class="pb-4 flex items-center">
+    <input type="text" v-model="username" placeholder="GitHub username" class="border p-2 mr-2 rounded">
+    <!-- Message Input Field with Flex Grow -->
+    <input type="text" v-model="text" placeholder="Message" class="border p-2 flex-grow rounded mr-2">
+    <button type="submit" class="bg-orange-400 text-white p-2 rounded">Send</button>
+  </form>
   <div class="flex-grow overflow-auto border border-gray-500 rounded-sm" id="messages">
     <div v-for="message in messages" :key="message.id" class="flex items-center p-2">
       <img :src="'https://github.com/' + message.username + '.png'" class="w-15 h-15 m-4 rounded-full object-cover" alt="Avatar Image" />
@@ -87,13 +93,5 @@ handle.on('change', ({doc}) => {
       </div>
     </div>
   </div>
-
-
-  <form @submit.prevent="addMessage" class="pt-4 flex items-center">
-    <input type="text" v-model="username" placeholder="GitHub username" class="border p-2 mr-2 rounded">
-    <!-- Message Input Field with Flex Grow -->
-    <input type="text" v-model="text" placeholder="Message" class="border p-2 flex-grow rounded mr-2">
-    <button type="submit" class="bg-blue-500 text-white p-2 rounded">Send</button>
-  </form>
 </div>
 </template>

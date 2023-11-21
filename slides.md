@@ -20,7 +20,7 @@ layout: cover
 
 # Hi, I'm David
 
-### I make open source things at [feathers.cloud](https://feathers.cloud) and sometimes music, too.
+### I make open source things at [feathers.cloud](https://feathers.cloud)
 
 <img src="/images/spacebird.svg" class="w-50 mx-a mt-4" alt="Space bird!" />
 
@@ -179,6 +179,16 @@ class: text-center
 <img alt="Authentication" src="/images/authentication.svg" class="mx-a w-70" />
 
 ---
+class: text-xl
+---
+
+# UCAN
+
+User Controlled Authorization Networks (UCANs) enable a scalable and secure way of authorizing offline-first apps and distributed systems.
+
+<img src="/images/ucan.png" class="w-8/12 mx-a mt-8" />
+
+---
 layout: cover
 background: /images/passkey.png
 class: text-xl
@@ -191,22 +201,38 @@ class: text-xl
 *Supported by over 99% of devices.*
 
 ---
-class: text-xl
----
-
-# UCAN
-
-User Controlled Authorization Networks (UCANs) enable a scalable and secure way of authorizing offline-first apps and distributed systems.
-
-<img src="/images/ucan.png" class="w-8/12 mx-a mt-8" />
-
+class: text-2xl
+layout: image-right
+image: /images/professor-bird.svg
 ---
 
 # Why local first?
 
-- Great developer experience
 - Fast
+- 100% uptime
 - Works offline
 - Easy to deploy
+- Secure by default
+- Scalable
 - Actually serverless
-- 100% uptime
+
+---
+class: text-2xl
+layout: two-cols
+---
+
+# Thank you!
+
+- [feathers.cloud](https://feathers.cloud)
+- [feathersjs.com](https://feathersjs.com)
+- [fission.codes](https://fission.codes)
+- [IPFS](https://ipfs.tech)
+- [CRDT.tech](https://crdt.tech/)
+- [Automerge](https://automerge.org/)
+- [Passkey](https://www.passkeys.com/)
+- [UCAN](https://ucan.xyz)
+- [Rust WASM](https://www.rust-lang.org/what/wasm)
+
+::right::
+
+<QRCode page="1" size="400" />
