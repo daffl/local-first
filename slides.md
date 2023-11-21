@@ -11,6 +11,12 @@ title: Building local-first apps
 background: /images/moonbase.svg
 ---
 
+---
+class: text-center
+layout: cover
+background: /images/moonbase.png
+---
+
 <h1 style="font-weight: 400;" class="m--40">Building local-first apps</h1>
 
 ---
