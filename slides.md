@@ -11,12 +11,6 @@ title: Building local-first apps
 background: /images/moonbase.svg
 ---
 
----
-class: text-center
-layout: cover
-background: /images/moonbase.png
----
-
 <h1 style="font-weight: 400;" class="m--40">Building local-first apps</h1>
 
 ---
@@ -26,7 +20,9 @@ layout: cover
 
 # Hi, I'm David
 
-### I do open source things at [feathers.cloud](https://feathers.cloud) and make music sometimes.
+### I make open source things at [feathers.cloud](https://feathers.cloud) and sometimes music, too.
+
+<img src="/images/spacebird.svg" class="w-50 mx-a mt-4" alt="Space bird!" />
 
 ---
 class: text-4xl
@@ -35,10 +31,12 @@ layout: cover
 
 # What do we need to build a webapp?
 
-- 💾 Storage
-- 🗄️ Database
-- 💻 Compute
-- 🔐 Authentication
+<ul class="list-none">
+  <li><img alt="Storage" src="images/storage.svg" class="w-15 inline" /> Storage</li>
+  <li><img alt="Database" src="images/database.svg" class="w-15 inline" /> Database</li>
+  <li><img alt="Compute" src="images/compute.svg" class="w-15 inline" /> Compute</li>
+  <li><img alt="Authentication" src="images/authentication.svg" class="w-15 inline" /> Authentication</li>
+</ul>
 
 ---
 layout: cover
@@ -52,7 +50,9 @@ layout: cover
 class: text-center
 ---
 
-# 💾 Storage
+# Storage
+
+<img alt="Storage" src="images/storage.svg" class="mx-a w-70" />
 
 ---
 
@@ -85,12 +85,14 @@ layout: cover
 class: text-center
 ---
 
-# 🗄️ Database
+# Database
+
+<img alt="Database" src="images/database.svg" class="mx-a w-70" />
 
 ---
 class: text-xl
 layout: image-right
-image: /images/crdt-favicon.png
+image: /images/sync-birds.svg
 ---
 
 # CRDTs
@@ -109,7 +111,7 @@ A Conflict-free replicated data type (CRDT) is a data structure that can be sync
 
 ---
 
-# Automerge
+# [Automerge](https://automerge.org/)
 
 ```ts
 import { Repo } from '@automerge/automerge-repo'
@@ -137,11 +139,21 @@ handle.on('change', ({doc}) => {
 ```
 
 ---
+
+<QRCode />
+
+---
+
+<CRDTDemo />
+
+---
 layout: cover
 class: text-center
 ---
 
-# 💻 Compute
+# Compute
+
+<img alt="Compute" src="images/compute.svg" class="mx-a w-70" />
 
 ---
 class: bg-gray-300 text-xl
@@ -158,7 +170,9 @@ layout: cover
 class: text-center
 ---
 
-# 🔐 Authentication
+# Authentication
+
+<img alt="Authentication" src="images/authentication.svg" class="mx-a w-70" />
 
 ---
 layout: cover

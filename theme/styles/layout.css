@@ -53,6 +53,10 @@
 
     ul,
     ol {
+      &.list-none {
+        list-style: none;
+      }
+
       li::marker {
         --at-apply: text-$cyan;
       }

@@ -39,24 +39,33 @@ function addMessage () {
 
 const messages = ref<Message[]>([])
 
-const rootDocUrl = `${document.location.hash.substring(1)}`
+const hash = `${document.location.hash.substring(1)}`
+
+if (isValidAutomergeUrl(hash)) {
+  window.localStorage.setItem('automerge:repo', hash)
+  document.location.hash = ''
+} 
+
+const rootDocUrl = window.localStorage.getItem('automerge:repo')
 
 let handle
+
 if (isValidAutomergeUrl(rootDocUrl)) {
-    handle = repo.find(rootDocUrl)
+  console.log('Loading automerge repo', rootDocUrl)
+  handle = repo.find(rootDocUrl)
 } else {
-    handle = repo.create()
-    handle.change(doc => {
-      doc.messages = []
-    })
+  handle = repo.create()
+  handle.change(doc => {
+    doc.messages = []
+  })
+  console.log('Created automerge repo', handle.url)
+  window.localStorage.setItem('automerge:repo', handle.url)
 }
 
 handle.on('change', ({doc}) => {
   messages.value = doc.messages
   document.getElementById('messages')!.scrollTo(0, document.getElementById('messages')!.scrollHeight)
 })
-
-document.location.hash = handle.url
 </script>
 
 <template>
