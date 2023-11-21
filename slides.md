@@ -11,7 +11,7 @@ title: Building local-first apps
 background: /images/moonbase.svg
 ---
 
-<h1 style="font-weight: 400;" class="m--40">Building local-first apps</h1>
+<h1 style="font-weight: 400; color: #FED06C;" class="m--40 drop-shadow-lg">Building local-first apps</h1>
 
 ---
 class: text-center
@@ -32,10 +32,10 @@ layout: cover
 # What do we need to build a webapp?
 
 <ul class="list-none">
-  <li><img alt="Storage" src="images/storage.svg" class="w-15 inline" /> Storage</li>
-  <li><img alt="Database" src="images/database.svg" class="w-15 inline" /> Database</li>
-  <li><img alt="Compute" src="images/compute.svg" class="w-15 inline" /> Compute</li>
-  <li><img alt="Authentication" src="images/authentication.svg" class="w-15 inline" /> Authentication</li>
+  <li><img alt="Storage" src="/images/storage.svg" class="w-15 inline" /> Storage</li>
+  <li><img alt="Database" src="/images/database.svg" class="w-15 inline" /> Database</li>
+  <li><img alt="Compute" src="/images/compute.svg" class="w-15 inline" /> Compute</li>
+  <li><img alt="Authentication" src="/images/authentication.svg" class="w-15 inline" /> Authentication</li>
 </ul>
 
 ---
@@ -43,7 +43,9 @@ layout: cover
 class: text-center
 ---
 
-# The browser is a universal application platform
+# The browser is a _universal_ application platform
+
+<img alt="Universal" src="/images/universal.svg" class="mx-a w-70" />
 
 ---
 layout: cover
@@ -52,13 +54,16 @@ class: text-center
 
 # Storage
 
-<img alt="Storage" src="images/storage.svg" class="mx-a w-70" />
+<img alt="Storage" src="/images/storage.svg" class="mx-a w-70" />
 
 ---
+class: text-xl
+---
 
-## Content addressing
+# Content addressing
 
 Gives _every_ file and directory a unique hash that can be used to look it up peer-to-peer from the closest phone/computer/server.
+
 
 ```html
 <html>
@@ -68,11 +73,10 @@ Gives _every_ file and directory a unique hash that can be used to look it up pe
 </html>
 ```
 
-Can be accessed trough:
+Can be accessed via [IPFS]() as:
 
-```
-ipfs://fjdkslfdsjklf
-```
+[ipfs://QmU3JRrRWESWX3ywNVx1A5zkSgpnwztniPhjNHG42yrtsG](https://ipfs.io/ipfs/QmU3JRrRWESWX3ywNVx1A5zkSgpnwztniPhjNHG42yrtsG)
+
 
 ---
 class: text-center bg-gray-300
@@ -87,7 +91,7 @@ class: text-center
 
 # Database
 
-<img alt="Database" src="images/database.svg" class="mx-a w-70" />
+<img alt="Database" src="/images/database.svg" class="mx-a w-70" />
 
 ---
 class: text-xl
@@ -111,16 +115,18 @@ A Conflict-free replicated data type (CRDT) is a data structure that can be sync
 
 ---
 
-# [Automerge](https://automerge.org/)
+# Automerge
 
 ```ts
 import { Repo } from '@automerge/automerge-repo'
 import { BroadcastChannelNetworkAdapter } from '@automerge/automerge-repo-network-broadcastchannel'
+import { IndexedDBStorageAdapter } from "@automerge/automerge-repo-storage-indexeddb"
 
 const repo = new Repo({
   network: [
     new BroadcastChannelNetworkAdapter(),
-  ]
+  ],
+  storage: new IndexedDBStorageAdapter()
 })
 
 const handle = repo.create() 
@@ -133,14 +139,12 @@ handle.change(doc => {
   })
 })
 
-handle.on('change', ({doc}) => {
-  // updated doc
-})
+handle.on('change', ({doc}) => {})
 ```
 
 ---
 
-<QRCode />
+<QRCode page="12" />
 
 ---
 
@@ -153,7 +157,7 @@ class: text-center
 
 # Compute
 
-<img alt="Compute" src="images/compute.svg" class="mx-a w-70" />
+<img alt="Compute" src="/images/compute.svg" class="mx-a w-70" />
 
 ---
 class: bg-gray-300 text-xl
@@ -172,7 +176,7 @@ class: text-center
 
 # Authentication
 
-<img alt="Authentication" src="images/authentication.svg" class="mx-a w-70" />
+<img alt="Authentication" src="/images/authentication.svg" class="mx-a w-70" />
 
 ---
 layout: cover
@@ -187,8 +191,14 @@ class: text-xl
 *Supported by over 99% of devices.*
 
 ---
+class: text-xl
+---
 
-## Web crypto
+# UCAN
+
+User Controlled Authorization Networks (UCANs) enable a scalable and secure way of authorizing offline-first apps and distributed systems.
+
+<img src="/images/ucan.png" class="w-8/12 mx-a mt-8" />
 
 ---
 
@@ -198,4 +208,5 @@ class: text-xl
 - Fast
 - Works offline
 - Easy to deploy
--
+- Actually serverless
+- 100% uptime
