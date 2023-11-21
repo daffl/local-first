@@ -11,10 +11,10 @@ const props = defineProps({
   }
 })
 
+// Get the location href until the last /
+const href = window.location.href.substring(0, window.location.href.lastIndexOf('/'))
 const hash = localStorage.getItem('automerge:repo')
-const defaultValue = props.value || props.page ?
-  `${window.location.protocol}//${window.location.host}/${props.page}#${hash}` : `${window.location.href}#${hash}`
-const value = ref(defaultValue)
+const value = ref(props.value || props.page ? `${href}/${props.page}#${hash}` : `${href}#${hash}`)
 </script>
 
 <template>
