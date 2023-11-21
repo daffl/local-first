@@ -75,7 +75,7 @@ Gives _every_ file and directory a unique hash that can be used to look it up pe
 
 Can be accessed via [IPFS]() as:
 
-[ipfs://QmU3JRrRWESWX3ywNVx1A5zkSgpnwztniPhjNHG42yrtsG](https://ipfs.io/ipfs/QmU3JRrRWESWX3ywNVx1A5zkSgpnwztniPhjNHG42yrtsG)
+[ipfs://QmU3JRrRWESWX3ywNVx1A5zkSgpnwztniPhjNHG42yrtsG](https://cf-ipfs.com/ipfs/QmU3JRrRWESWX3ywNVx1A5zkSgpnwztniPhjNHG42yrtsG)
 
 
 ---
@@ -212,7 +212,7 @@ image: /images/professor-bird.svg
 - 100% uptime
 - Works offline
 - Easy to deploy
-- Secure by default
+- Built in security
 - Scalable
 - Actually serverless
 
