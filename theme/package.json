@@ -47,7 +47,7 @@
     "highlighter": "shiki",
     "defaults": {
       "fonts": {
-        "sans": "Nunito Sans",
+        "sans": "Poppins",
         "mono": "JetBrains Mono"
       },
       "hightlighter": "shiki"

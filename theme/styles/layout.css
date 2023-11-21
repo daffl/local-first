@@ -7,7 +7,7 @@
    */
 
   /* Dracula colors: https: //draculatheme.com/contribute */
-  --background: hsl(231, 15%, 18%);
+  --background: hsl(248, 38%, 15%);
   --current-line: hsl(232, 14%, 31%);
   --foreground: hsl(60, 30%, 96%);
   --comment: hsl(225, 27%, 51%);
@@ -18,12 +18,15 @@
   --purple: hsl(265, 89%, 78%);
   --red: hsl(0, 100%, 67%);
   --yellow: hsl(65, 92%, 76%);
+  --white: hsl(60, 100%, 98%);
+  --primary: hsl(359, 79%, 65%);
 }
 
 /* ℹ️ #app increases the specificity of .dark selector from upstream layout styles  */
 #app {
-  #slide-content {
+  font-weight: 300;
 
+  #slide-content {
     --at-apply: text-$foreground bg-$background !important;
 
     h1,
@@ -32,7 +35,7 @@
     h4,
     h5,
     h6 {
-      --at-apply: text-$purple;
+      --at-apply: text-$white;
     }
 
     strong {
@@ -44,7 +47,7 @@
     }
 
     a {
-      --at-apply: text-$cyan;
+      --at-apply: text-$primary;
       border: none;
     }
 
@@ -71,7 +74,7 @@
       background: hsl(231, 15%, 10%) !important;
     }
 
-    :not(pre)>code {
+    :not(pre) > code {
       --at-apply: bg-transparent text-$green;
     }
   }
@@ -85,13 +88,13 @@
       --at-apply: text-6xl leading-20 text-$purple;
     }
 
-    h1+p {
+    h1 + p {
       --at-apply: -mt-2 text-$comment mb-4;
     }
 
-    p+h2,
-    ul+h2,
-    table+h2 {
+    p + h2,
+    ul + h2,
+    table + h2 {
       --at-apply: mt-10;
     }
   }
@@ -104,7 +107,7 @@
       --at-apply: text-8xl font-700;
     }
 
-    h1+p {
+    h1 + p {
       --at-apply: font-700 text-2xl;
     }
   }
@@ -133,7 +136,7 @@
       --at-apply: text-8xl font-700;
     }
 
-    h1+p {
+    h1 + p {
       --at-apply: font-700 text-2xl;
     }
   }
@@ -142,7 +145,7 @@
   .slidev-layout.quote {
     --at-apply: grid h-full;
 
-    h1+p {
+    h1 + p {
       --at-apply: mt-2;
     }
   }
@@ -157,7 +160,7 @@
       --at-apply: text-3xl font-600 mb-0 next-[p]-mt-2;
     }
 
-    h1+p {
+    h1 + p {
       --at-apply: max-w-40ch mx-auto;
     }
 
