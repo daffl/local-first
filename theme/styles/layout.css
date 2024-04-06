@@ -29,7 +29,9 @@
   #slide-content {
     --at-apply: text-$foreground bg-$background !important;
 
-    h1,
+    h1 {
+      --at-apply: text-$primary;
+    }
     h2,
     h3,
     h4,
@@ -39,7 +41,7 @@
     }
 
     strong {
-      --at-apply: text-$orange;
+      --at-apply: text-$primary;
     }
 
     em {
@@ -47,7 +49,7 @@
     }
 
     a {
-      --at-apply: text-$primary;
+      --at-apply: text-$orange;
       border: none;
     }
 
